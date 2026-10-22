@@ -18,7 +18,7 @@ java -cp bin cyberlab.Main
 
 ## Available tools
 
-- **Password Analyzer** — checks password length and character variety, then gives a basic strength estimate and recommendations.
+- **Password Analyzer** — checks password length and character variety, flags a small set of common passwords and predictable patterns, and provides a heuristic score with recommendations. The score is not a guarantee of password security.
 - **Password Generator** — planned.
 - **File Integrity Checker** — planned.
 - **Log Analyzer** — planned.

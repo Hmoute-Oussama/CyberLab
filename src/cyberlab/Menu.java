@@ -72,9 +72,26 @@ public class Menu {
         System.out.println("Lowercase letters: " + yesNo(result.hasLowercase()));
         System.out.println("Digits: " + yesNo(result.hasDigit()));
         System.out.println("Special characters: " + yesNo(result.hasSpecialCharacter()));
+        System.out.println("Distinct characters: " + result.getDistinctCharacters());
         System.out.println();
+        System.out.println("Score: " + result.getScore() + "/100 (heuristic)");
         System.out.println("Strength: " + result.getStrength());
-        System.out.println("Recommendation: " + result.getRecommendation());
+
+        if (!result.getWarnings().isEmpty()) {
+            System.out.println();
+            System.out.println("Warnings:");
+            for (String warning : result.getWarnings()) {
+                System.out.println("- " + warning);
+            }
+        }
+
+        System.out.println();
+        System.out.println("Recommendations:");
+        for (String recommendation : result.getRecommendations()) {
+            System.out.println("- " + recommendation);
+        }
+        System.out.println();
+        System.out.println("This estimate is heuristic, not a guarantee of password security.");
     }
 
     private String yesNo(boolean value) {
